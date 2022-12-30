@@ -91,7 +91,7 @@ public class LambdaUpdateWrapper<T> extends AbstractLambdaWrapper<T, LambdaUpdat
         return typedThis;
     }
 
-    public LambdaUpdateWrapper<T> setSql(boolean condition, SFunction<T, ?> column, String valueSql, Object... values) {
+    public LambdaUpdateWrapper<T> setApply(boolean condition, SFunction<T, ?> column, String valueSql, Object... values) {
         if (!condition || StringUtils.isBlank(valueSql)) {
             return typedThis;
         }
